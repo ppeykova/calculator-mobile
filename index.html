@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"/>
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <title>Travel Quick Converter</title>
+
+    <link rel="manifest" sizes="192x192" href="icons8-currency.png">
+    <link rel="icon" sizes="192x192" href="icons8-currency.png">
+    <link rel="apple-touch-icon" href="icons8-currency.png">
+    <link rel="shortcut icon" type="image/x-icon" href="icons8-currency.png">
+    <link href="https://emoji-css.afeld.me/emoji.css" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="calc.css">
+</head>
+<body>
+<header>Travel Rates</header>
+<main>
+    <div class="calc-cont">
+        <div class="display">
+            <div class="content">
+                <nav role="navigation">
+                    <span id="menu" onclick="openNav()">&#9776;</span>
+                    <div id="myNav" class="overlay">
+                    <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+                    <div class="overlay-content" id="option">
+                        <p>Home:</p>
+                        <select id="homeCurrency">
+                            <option id="GBP">🇬🇧 GBP</option>
+                            <option id="EUR">🇪🇺 EUR</option>
+                            <option id="USD">🇺🇸 USD</option>
+                            <option id="JPY">🇯🇵 JPY</option>
+                            <option id="BGN">🇧🇬 BGN</option>
+                            <option id="CZK">🇨🇿 CZK</option>
+                            <option id="DKK">🇩🇰 DKK</option>
+                            <option id="HUF">🇭🇺 HUF</option>
+                            <option id="PLN">🇵🇱 PLN</option>
+                            <option id="RON">🇷🇴 RON</option>
+                            <option id="SEK">🇸🇪 SEK</option>
+                            <option id="CHF">🇨🇭 CHF</option>
+                            <option id="ISK">🇮🇸 ISK</option>
+                            <option id="NOK">🇳🇴 NOK</option>
+                            <option id="HRK">🇭🇷 HRK</option>
+                            <option id="RUB">🇷🇺 RUB</option>
+                            <option id="TRY">🇹🇷 TRY</option>
+                            <option id="AUD">🇦🇺 AUD</option>
+                            <option id="BRL">🇧🇷 BRL</option>
+                            <option id="CAD">🇨🇦 CAD</option>
+                            <option id="CNY">🇨🇳 CNY</option>
+                            <option id="HKD">🇭🇰 HKD</option>
+                            <option id="IDR">🇮🇩 IDR</option>
+                            <option id="ILS">🇮🇱 ILS</option>
+                            <option id="INR">🇮🇳 INR</option>
+                            <option id="KRW">🇰🇷 KRW</option>
+                            <option id="MXN">🇲🇽 MXN</option>
+                            <option id="MYR">🇲🇾 MYR</option>
+                            <option id="NZD">🇳🇿 NZD</option>
+                            <option id="PHP">🇵🇭 PHP</option>
+                            <option id="SGD">🇸🇬 SGD</option>
+                            <option id="THB">🇹🇭 THB</option>
+                            <option id="ZAR">🇿🇦 ZAR</option>
+                        </select>
+                        <p>Visiting:</p>
+                        <select id="visitCurrency">
+                            <option id="EUR">🇪🇺 EUR</option>
+                            <option id="GBP">🇬🇧 GBP</option>
+                            <option id="USD">🇺🇸 USD</option>
+                            <option id="JPY">🇯🇵 JPY</option>
+                            <option id="BGN">🇧🇬 BGN</option>
+                            <option id="CZK">🇨🇿 CZK</option>
+                            <option id="DKK">🇩🇰 DKK</option>
+                            <option id="HUF">🇭🇺 HUF</option>
+                            <option id="PLN">🇵🇱 PLN</option>
+                            <option id="RON">🇷🇴 RON</option>
+                            <option id="SEK">🇸🇪 SEK</option>
+                            <option id="CHF">🇨🇭 CHF</option>
+                            <option id="ISK">🇮🇸 ISK</option>
+                            <option id="NOK">🇳🇴 NOK</option>
+                            <option id="HRK">🇭🇷 HRK</option>
+                            <option id="RUB">🇷🇺 RUB</option>
+                            <option id="TRY">🇹🇷 TRY</option>
+                            <option id="AUD">🇦🇺 AUD</option>
+                            <option id="BRL">🇧🇷 BRL</option>
+                            <option id="CAD">🇨🇦 CAD</option>
+                            <option id="CNY">🇨🇳 CNY</option>
+                            <option id="HKD">🇭🇰 HKD</option>
+                            <option id="IDR">🇮🇩 IDR</option>
+                            <option id="ILS">🇮🇱 ILS</option>
+                            <option id="INR">🇮🇳 INR</option>
+                            <option id="KRW">🇰🇷 KRW</option>
+                            <option id="MXN">🇲🇽 MXN</option>
+                            <option id="MYR">🇲🇾 MYR</option>
+                            <option id="NZD">🇳🇿 NZD</option>
+                            <option id="PHP">🇵🇭 PHP</option>
+                            <option id="SGD">🇸🇬 SGD</option>
+                            <option id="THB">🇹🇭 THB</option>
+                            <option id="ZAR">🇿🇦 ZAR</option>
+                        </select>
+                        <br>
+                        <p>Bank fee:</p>
+                        <input type="radio" name="bankFee" value="0" id="fee0" checked="true" class="inputOpt"> 0%<br>
+                        <input type="radio" name="bankFee" value="2" id="fee2" class="inputOpt"> 2%<br>
+                        <input type="radio" name="bankFee" value="4" id="fee4" class="inputOpt"> 4%<br>
+                        <input type="radio" name="bankFee" value="6" id="fee6" class="inputOpt"> 6%<br>
+                    </div>
+                </div>
+                    <input class="screen" type="text" id="result" value="" disabled/>
+                </nav>
+            </div>
+            <table class="calc-keys">
+                <tr>
+                    <td><button class="button" id="seven">7</button></td>
+                    <td><button class="button" id="eight">8</button> </td>
+                    <td><button class="button" id="nine">9</button> </td>
+                </tr>
+                <tr>
+                    <td><button class="button" id="four" >4</button></td>
+                    <td><button class="button" id="five" >5</button></td>
+                    <td><button class="button" id="six" >6</button></td>
+                </tr>
+                <tr>
+                    <td><button class="button"  id="one" >1</button></td>
+                    <td><button class="button" id="two" >2</button></td>
+                    <td><button class="button" id="three">3</button> </td>
+                </tr>
+                <tr>
+                    <td><button class="button" id="clear">C</button> </td>
+                    <td><button class="button" id="zero">0</button> </td>
+                    <td><button class="button" id="equals">=</button> </td>
+                </tr>
+            </table>
+        </div>
+    </div>
+</main>
+<footer>Strathclyde University, Glasgow</footer>
+<script type="text/javascript" src="CalcModel.js"></script>
+<script type="text/javascript" src="CalcView.js"></script>
+<script type="text/javascript" src="CalcController.js"></script>
+</body>
+</html>
